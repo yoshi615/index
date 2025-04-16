@@ -45,6 +45,21 @@
             top: 920px;
         }
     </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const iframe = document.getElementById("inline-frame");
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        iframe.src = "https://yohman.github.io/reitaku-map/";
+                        observer.disconnect(); // 一度読み込んだら監視を停止
+                    }
+                });
+            });
+    
+            observer.observe(iframe);
+        });
+    </script>
 </head>
 <body>
     <h1>こんにちは、北浦義就です！</h1>
@@ -97,7 +112,7 @@
         width="1000px"
         height="650px"
         loading="lazy"
-        src="https://yohman.github.io/reitaku-map/">
+        <!-- src="https://yohman.github.io/reitaku-map/"> -->
     </iframe>
 
     <img src="images/arrow.png"
