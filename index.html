@@ -9,40 +9,76 @@
             font-family: 'Arial', sans-serif;
             background: url('images/b110.gif') no-repeat center center fixed;
             background-repeat: repeat;
+            z-index: 0;
         }
+        body::before {
+            content: "";
+            background: url('images/b065.gif') ;
+            background-size: repeat;
+            box-shadow: 10px 0 8px -8px rgba(0, 0, 0, 0.5), -10px 0 8px -8px rgba(0, 0, 0, 0.5);
+            position: absolute;
+            top: 7px;
+            left: 300px;
+            width: 700px;
+            height: 970px;
+            z-index: 1;
+            opacity: 100%;
+        }
+        
         h1 {
             color: #4CAF50;
             font-size: 2.5em;
-            z-index: 1;
+            z-index: 2;
             margin-top: 20px;
             position: relative;
         }
         p {
             font-size: 1.2em;
             margin: 20px;
-            z-index: 1;
+            z-index: 2;
             line-height: 1.5;
             position: relative;
             text-align: left;
-            left: 28%;
+            left: 350px;
+            top: 8px;
         }
         h2 {
             position: relative;
-            left: 29.7%;
+            left: 370px;
+            top: 0px;
             text-align: left;
+            z-index: 2;
+            line-height: 1.05;
         }
         ul {
             display: block;
             position: relative;
             text-align: left;
-            left: 28%;
+            left: 350px;
             top: -17px;
+            z-index: 2;
+        }
+        li {
+            font-size: 1.2em;
+            margin: 10px 0;
+            z-index: 2;
+            position: relative;
+            top:2px;
+            line-height: 0.75;
         }
         h3 {
             font-size: 1.0em;
             position: absolute;
-            left: 83%;
+            right: 50px;
             top: 920px;
+            z-index: 2;
+        }
+        h4 {
+            font-size: 1.25em;
+            position: relative;
+            left: -95px;
+            top: 20px;
+            z-index: 2;
         }
     </style>
     <script>
@@ -64,6 +100,7 @@
 <body>
     <h1>こんにちは、北浦義就です！</h1>
     <p>初めまして、義就です。学部は工学部、専攻はロボティクス専攻です。
+        <br>出身は<a href="https://maps.app.goo.gl/esUWgS3ewBJgzJHk8" target="_blank">茨城県那珂市</a>です。
         <br>小～中学ではバスケ、高校では演劇をしてました！
         <br>お気に入りのサイトは <a href="https://www.youtube.com" target="_blank">YouTube</a> です。</p>
  
@@ -88,37 +125,47 @@
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12912.775665794874!2d138.1149864298308!3d35.991128186943214!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601c571db47f132b%3A0x2013d574e55e5594!2z6KuP6Kiq5aSn56S-IOS4iuekviDliY3lrq4!5e0!3m2!1sja!2sjp!4v1744708713310!5m2!1sja!2sjp"
     width="300"
     height="300"
-    style="border:0; position:relative; left:-101px; top: -15px;"
+    style="border:0; position:relative; left:-101px; top: -15px; z-index: 2;"
     allowfullscreen=""
     loading="lazy"
     referrerpolicy="no-referrer-when-downgrade">
     </iframe>
 
-    <h2><a href="https://yohman.github.io/reitaku-map/" target="_blank">キャンパスマップ</a>製作中！！</h2>
+    <h4><a href="https://yohman.github.io/reitaku-map/" target="_blank">キャンパスマップ</a>製作中！！</h4>
 
     <h3>QRコードからも見れるよ！</h3>
     <img src="images/me.jpg" 
     width="220" 
     alt="私の写真" 
-    style="position: absolute; top: 25px; left: 75px; border-radius: 50%; overflow: hidden;">
+    style="position: absolute; top: 25px; left: 68px; border-radius: 50%; overflow: hidden; z-index: 2;">
 
         <img src="images/reitaku-QR.png"
         width="200"
         alt="QRコード"
-        style="position: absolute; top: 750px; right: 15px; overflow: hidden;">
+        style="position: absolute; top: 750px; right: 55px; overflow: hidden; z-index: 2;">
 
     <iframe id="inline-frame"
         alt="campus map"
         width="1000px"
         height="650px"
         loading="lazy"
-        <!-- src="https://yohman.github.io/reitaku-map/"> -->
+        style="position: relative; z-index: 2; top: 10px;">
     </iframe>
 
     <img src="images/arrow.png"
     width="200"
     alt="矢印"
-    style="position: absolute; top: 787px; right: 210px;">
+    style="position: absolute; top: 787px; right: 260px; z-index: 2;">
+
+    <img src="images/N4-basketball.jpg"
+    width="180"
+    alt="バスケ部"
+    style="position: absolute; top: 280px; right: 320px; z-index: 2; box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">
+
+    <img src="images/sticky-note.png"
+    width="80"
+    alt="付箋"
+    style="position: absolute; top: 270px; right: 360px; z-index: 2; transform: rotate(-30deg); ">
 
 </body>
 </html>
